@@ -1,0 +1,35 @@
+<?php
+  require("header.php");
+?>
+
+
+
+<div class="panel panel-primary ">
+  <div class="panel-heading">Employee detail</div>
+  <div class="panel-body">
+
+      <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd><?php echo $empleado->name ?></dd>
+        <dt>Email</dt>
+        <dd><?php echo $empleado->email ?></dd>
+        <dt>Phone</dt>
+        <dd><?php echo $empleado->phone ?></dd>
+        <dt>Address</dt>
+        <dd><?php echo $empleado->address ?></dd>
+        <dt>Position</dt>
+        <dd><?php echo $empleado->position ?></dd>
+        <dt>Salary</dt>
+        <dd><?php echo $empleado->salary ?></dd>
+        <dt>Skills</dt>
+        <dd><?php
+              for($i=0;$i<5;$i++) echo $empleado->skills[$i]->skill . ($i<4?',':''); ?></dd>
+      </dl>
+
+  </div>
+</div>
+    </table>
+
+
+  </body>
+</html>
