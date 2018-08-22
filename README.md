@@ -1,8 +1,31 @@
-# Slim Framework 3 Skeleton Application
+# Ejercicio parte 2 - El comercio
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+Se realiza listado de empleados, detalles, búsqueda por Email y se expone un api que permite la búsqueda por rango de salarios.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+## Rutas
+
+Listado de empleados
+
+	/
+
+
+Búsqueda por email y muestra el listado de coincidencias: 
+
+	/?email={email}
+
+Detalle de un empleado 
+
+	/e/{id}
+
+Api búsqueda de empleados por rango de salario (XML) 
+
+	/api
+	@Method: POST
+	@Param double min_salary
+	@Param double max_salary
+	@Return string XML Listado de empleados
+
+
 
 ## Install the Application
 
