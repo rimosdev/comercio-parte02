@@ -1,7 +1,7 @@
 <?php
 
 /* shared/header.html */
-class __TwigTemplate_299ce430eefe3dd8c7e33940e6f1c3713490d8d954888cdf5b6a21c991fd80ff extends Twig_Template
+class __TwigTemplate_7c05e6d0a8720df07255e250408389286bdfd24a0dea10b7d264dd3a31a1192d extends Twig_Template
 {
     private $source;
 
@@ -71,14 +71,14 @@ class __TwigTemplate_299ce430eefe3dd8c7e33940e6f1c3713490d8d954888cdf5b6a21c991f
   <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
    
     <div class=\"col-sm-3 col-md-3\">
-        <form class=\"navbar-form\" role=\"search\" method=\"POST\" action=\"";
+        <form class=\"navbar-form\" role=\"search\" method=\"GET\" action=\"";
         // line 43
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "\">
         <div class=\"input-group\">
-            <input type=\"text\" class=\"form-control\" placeholder=\"Email\" name=\"q\" value=\"";
+            <input type=\"text\" class=\"form-control\" placeholder=\"Email\" name=\"email\" value=\"";
         // line 45
-        echo twig_escape_filter($this->env, ($context["q"] ?? null), "html", null, true);
+        echo twig_escape_filter($this->env, ($context["q_email"] ?? null), "html", null, true);
         echo "\">
             <div class=\"input-group-btn\">
                 <button class=\"btn btn-default\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i></button>
@@ -107,6 +107,6 @@ class __TwigTemplate_299ce430eefe3dd8c7e33940e6f1c3713490d8d954888cdf5b6a21c991f
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "shared/header.html", "C:\\sw\\nginx\\html\\rimos\\comercio-parte02\\templates\\shared\\header.html");
+        return new Twig_Source("", "shared/header.html", "C:\\sw\\nginx\\html\\comercio-parte02\\templates\\shared\\header.html");
     }
 }

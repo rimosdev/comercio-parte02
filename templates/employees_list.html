@@ -1,35 +1,35 @@
 {% include 'shared/header.html' %}
+        <div class="container">
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                    </tr>
+                </tfoot>
 
-    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Position</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Position</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
+                {% for empleado in empleados %}
+                    <tr>
+                    <td><a href="e/{{ empleado.id }}">{{ empleado.name }}</a></td>
+                    <td>{{ empleado.email }}</td>
+                    <td>{{ empleado.position }}</td>
+                    <td>{{ empleado.salary }}</td>
+                    </tr>
+                {% else %}
+                    <tr><td colspan="4">No users have been found.</td></tr>
+                {% endfor %}
+            </table>
+        </div>
 
-        {% for empleado in empleados %}
-            <tr>
-            <td><a href="e/{{ empleado.id }}">{{ empleado.name }}</a></td>
-            <td>{{ empleado.email }}</td>
-            <td>{{ empleado.position }}</td>
-            <td>{{ empleado.salary }}</td>
-            </tr>
-        {% else %}
-            <tr><td colspan="4">No users have been found.</td></tr>
-        {% endfor %}
-    </table>
-
-
-  </body>
+    </body>
 </html>

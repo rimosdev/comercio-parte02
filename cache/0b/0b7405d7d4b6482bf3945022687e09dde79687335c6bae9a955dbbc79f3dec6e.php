@@ -1,7 +1,7 @@
 <?php
 
 /* employee_detail.html */
-class __TwigTemplate_5e525536f80d5dd586aad4fce89c5894b129569bd6d6c961567460625757f16e extends Twig_Template
+class __TwigTemplate_8d14984c1bbd1b70cac09ee5ab650c7539f18fe66b802dec18dd39b507d230df extends Twig_Template
 {
     private $source;
 
@@ -22,54 +22,55 @@ class __TwigTemplate_5e525536f80d5dd586aad4fce89c5894b129569bd6d6c96156746062575
         // line 1
         $this->loadTemplate("shared/header.html", "employee_detail.html", 1)->display($context);
         // line 2
-        echo "
-<div class=\"panel panel-primary \">
-  <div class=\"panel-heading\">Employee detail</div>
-  <div class=\"panel-body\">
+        echo "    <div class=\"container\">
 
-      <dl class=\"dl-horizontal\">
-        <dt>Name</dt>
-        <dd>";
-        // line 9
+      <div class=\"panel panel-primary \">
+        <div class=\"panel-heading\">Employee detail</div>
+        <div class=\"panel-body\">
+
+            <dl class=\"dl-horizontal\">
+              <dt>Name</dt>
+              <dd>";
+        // line 10
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "name", array()), "html", null, true);
         echo "</dd>
-        <dt>Email</dt>
-        <dd>";
-        // line 11
+              <dt>Email</dt>
+              <dd>";
+        // line 12
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "email", array()), "html", null, true);
         echo "</dd>
-        <dt>Phone</dt>
-        <dd>";
-        // line 13
+              <dt>Phone</dt>
+              <dd>";
+        // line 14
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "phone", array()), "html", null, true);
         echo "</dd>
-        <dt>Address</dt>
-        <dd>";
-        // line 15
+              <dt>Address</dt>
+              <dd>";
+        // line 16
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "address", array()), "html", null, true);
         echo "</dd>
-        <dt>Position</dt>
-        <dd>";
-        // line 17
+              <dt>Position</dt>
+              <dd>";
+        // line 18
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "position", array()), "html", null, true);
         echo "</dd>
-        <dt>Salary</dt>
-        <dd>";
-        // line 19
+              <dt>Salary</dt>
+              <dd>";
+        // line 20
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["empleado"] ?? null), "salary", array()), "html", null, true);
         echo "</dd>
-        <dt>Skills</dt>
-        <dd>
-            ";
-        // line 22
+              <dt>Skills</dt>
+              <dd>
+                  ";
+        // line 23
         echo twig_escape_filter($this->env, ($context["skills"] ?? null), "html", null, true);
         echo "
-        </dd>
-      </dl>
+              </dd>
+            </dl>
 
-  </div>
-</div>
-
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>";
@@ -87,11 +88,11 @@ class __TwigTemplate_5e525536f80d5dd586aad4fce89c5894b129569bd6d6c96156746062575
 
     public function getDebugInfo()
     {
-        return array (  65 => 22,  59 => 19,  54 => 17,  49 => 15,  44 => 13,  39 => 11,  34 => 9,  25 => 2,  23 => 1,);
+        return array (  66 => 23,  60 => 20,  55 => 18,  50 => 16,  45 => 14,  40 => 12,  35 => 10,  25 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "employee_detail.html", "C:\\sw\\nginx\\html\\rimos\\comercio-parte02\\templates\\employee_detail.html");
+        return new Twig_Source("", "employee_detail.html", "C:\\sw\\nginx\\html\\comercio-parte02\\templates\\employee_detail.html");
     }
 }

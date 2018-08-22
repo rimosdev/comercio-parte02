@@ -8,19 +8,27 @@ use Slim\Http\Response;
 // Render Twig template in route
 $app->get('/', function ($request, $response, $args) {
 
-    $email = $app->request()->get('email');
+    $email = $request->getQueryParam('email');
+    // $foo = $request->getAttribute('email');
     $empleados = json_decode(file_get_contents('assets/json/employees.json'));
 
     // checking do filter
-    if(isset($email)) {
+    if($email) {
+        $empleados_found = [];
         foreach ($empleados as $key => $value) {
-            # code...
+            if(strstr($value->email, $email)) {
+                $empleados_found[] = $value;
+            }
         }
+        $empleados = $empleados_found;
     }
+
+    // exit($request->getUri()->getBaseUrl());
 
     return $this->view->render($response, 'employees_list.html', [
         'empleados' => $empleados,
-        'base_url' => ''
+        'q_email'   => $email,
+        'base_url'  => $request->getUri()->getBaseUrl()
     ]);
 })->setName('employees');
 
@@ -48,6 +56,6 @@ $app->get('/e/{eid}', function ($request, $response, $args) {
     return $this->view->render($response, 'employee_detail.html', [
         'empleado'  => $empleado,
         'skills'    => $skills,
-        'base_url'  => ''
+        'base_url'  => $request->getUri()->getBaseUrl()
     ]);
 })->setName('profile');

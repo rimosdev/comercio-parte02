@@ -1,31 +1,32 @@
 {% include 'shared/header.html' %}
+    <div class="container">
 
-<div class="panel panel-primary ">
-  <div class="panel-heading">Employee detail</div>
-  <div class="panel-body">
+      <div class="panel panel-primary ">
+        <div class="panel-heading">Employee detail</div>
+        <div class="panel-body">
 
-      <dl class="dl-horizontal">
-        <dt>Name</dt>
-        <dd>{{ empleado.name }}</dd>
-        <dt>Email</dt>
-        <dd>{{ empleado.email }}</dd>
-        <dt>Phone</dt>
-        <dd>{{ empleado.phone }}</dd>
-        <dt>Address</dt>
-        <dd>{{ empleado.address }}</dd>
-        <dt>Position</dt>
-        <dd>{{ empleado.position }}</dd>
-        <dt>Salary</dt>
-        <dd>{{ empleado.salary }}</dd>
-        <dt>Skills</dt>
-        <dd>
-            {{ skills }}
-        </dd>
-      </dl>
+            <dl class="dl-horizontal">
+              <dt>Name</dt>
+              <dd>{{ empleado.name }}</dd>
+              <dt>Email</dt>
+              <dd>{{ empleado.email }}</dd>
+              <dt>Phone</dt>
+              <dd>{{ empleado.phone }}</dd>
+              <dt>Address</dt>
+              <dd>{{ empleado.address }}</dd>
+              <dt>Position</dt>
+              <dd>{{ empleado.position }}</dd>
+              <dt>Salary</dt>
+              <dd>{{ empleado.salary }}</dd>
+              <dt>Skills</dt>
+              <dd>
+                  {{ skills }}
+              </dd>
+            </dl>
 
-  </div>
-</div>
-
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
